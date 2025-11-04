@@ -1,12 +1,11 @@
-import whisper
-from agent import ExerciseAgent
 import os
 import getpass
-# А вот это необязательно, но я гоняю на NPU
+import sys
+import whisper
 import intel_npu_acceleration_library as npu
 from intel_npu_acceleration_library.compiler import CompilerConfig
 import torch
-
+from agent import ExerciseAgent
 
 def main():
     """Основная функция для запуска генерации упражнений из аудио/видео файлов"""
@@ -16,6 +15,8 @@ def main():
         model = whisper.load_model("turbo")
     except Exception as e:
         print(f"Не удалось загрузить модель 'turbo': {e}")
+        print("Попробуйте модель 'base' или проверьте установку Whisper.")
+        sys.exit(1)
 
     print("Пробубуем оптимизацию для Intel NPU...")
     try:
