@@ -1,0 +1,7 @@
+intel_npu_acceleration_library==1.4.0
+langchain==1.0.3
+langchain_deepseek==1.0.0
+openai_whisper==20250625
+spacy==3.8.7
+torch==2.9.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
