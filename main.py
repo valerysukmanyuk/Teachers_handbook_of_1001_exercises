@@ -2,7 +2,6 @@ import whisper
 from agent import ExerciseAgent
 import os
 import getpass
-# Teacher's_handbook_of_1001_exercises
 # А вот это необязательно, но я гоняю на NPU
 import intel_npu_acceleration_library as npu
 from intel_npu_acceleration_library.compiler import CompilerConfig
