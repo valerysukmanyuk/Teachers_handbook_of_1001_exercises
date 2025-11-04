@@ -9,7 +9,7 @@
 
 ## Overview
 
-**Teacher’s Handbook of 1001 Exercises** is an AI-powered assistant that helps educators create contextualized language exercises directly from video materials.
+**Teacher’s Handbook of 1001 Exercises** is an AI-powered assistant that helps educators create contextualized language exercises directly from short video materials.
 Using **Whisper** for transcription, **spaCy** for linguistic analysis, and **LangChain** for intelligent reasoning, the system automatically selects meaningful vocabulary and generates well-formatted *fill-in-the-gap* tasks suitable for different learner levels.
 
 This tool turns authentic video input into ready-to-use language exercises — saving teachers hours of manual work while keeping tasks pedagogically sound.
@@ -54,19 +54,10 @@ If no NPU is available, it will still run normally using CPU.
 2. **Install Python dependencies:**
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements.txt   
    ```
 
-3. **(Optional) Install Intel NPU acceleration library:**
-
-   ```bash
-   pip install intel-npu-acceleration
-   ```
-
-   This enables optimized execution on devices equipped with Intel® NPU.
-   The tool will still work on CPU/GPU even if this library is not installed.
-
-4. **Install FFmpeg (required for Whisper):**
+3. **Install FFmpeg (required for Whisper):**
 
    Whisper relies on [FFmpeg](https://ffmpeg.org/) to process audio and video files.
 
@@ -88,7 +79,7 @@ If no NPU is available, it will still run normally using CPU.
      sudo apt update && sudo apt install ffmpeg
      ```
 
-5. **Prepare your media files:**
+4. **Prepare your media files:**
 
    Place your **video** or **audio** files in the same folder as `main.py`.
    Example:
@@ -102,7 +93,7 @@ If no NPU is available, it will still run normally using CPU.
    └── video_lesson.mp4   ← your input file
    ```
 
-6. **Run the main script:**
+5. **Run the main script:**
 
    ```bash
    python main.py
