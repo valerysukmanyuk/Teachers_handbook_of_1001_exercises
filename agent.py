@@ -125,7 +125,7 @@ class ExerciseAgent:
         transcribed_text = self.transcribe(file_name)
         chuncked = self.text_splitter(transcribed_text)
         vocab = self.vocabulary_extractor(str(chuncked))
-        input = f"""Original text: {chuncked}, Extracted vocabulary: {vocab}"""
+        input = f"""Original text: {chuncked[:20]}, Extracted vocabulary: {vocab}"""
 
         result = self.agent.invoke({"messages": [{"role": "user", "content": str(input)}]})
         
