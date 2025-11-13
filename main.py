@@ -28,7 +28,7 @@ def main():
         whisper_model = model
 
     if "DEEPSEEK_API_KEY" not in os.environ:
-        print("Мы тут юзаем deepseek, поэтому гоните ключ")
+        print("Мы тут юзаем deepseek, поэтому давайте ключ")
         os.environ["DEEPSEEK_API_KEY"] = getpass.getpass("Введите ваш DEEPSEEK API ключ: ")
 
     # Создание агента и запуск
